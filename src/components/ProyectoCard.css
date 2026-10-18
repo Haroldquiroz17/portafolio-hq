@@ -1,0 +1,22 @@
+﻿.proyecto-card {
+  overflow: hidden;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  background: white;
+  color: #111827;
+}
+
+.proyecto-card img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+}
+
+.proyecto-card-contenido {
+  padding: 1rem;
+}
+
+.proyecto-card h3 {
+  margin: 0.5rem 0 0;
+}

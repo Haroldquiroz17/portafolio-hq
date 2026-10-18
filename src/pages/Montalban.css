@@ -1,0 +1,1166 @@
+﻿
+.montalban-page {
+  --montalban-cream: #f7f0e5;
+  --montalban-paper: #fffdf9;
+  --montalban-brown: #563a2d;
+  --montalban-dark: #34231c;
+  --montalban-gold: #c5a46d;
+  --montalban-muted: #766a60;
+  --montalban-border: #e8ded0;
+
+  background: var(--montalban-paper);
+  color: var(--montalban-dark);
+  font-family: "Inter", "Segoe UI", sans-serif;
+  overflow: hidden;
+}
+
+.montalban-page *,
+.montalban-page *::before,
+.montalban-page *::after {
+  box-sizing: border-box;
+}
+
+.montalban-page a {
+  text-decoration: none;
+}
+
+.montalban-container {
+  width: min(1160px, calc(100% - 48px));
+  margin: 0 auto;
+}
+
+/* BARRA SUPERIOR */
+
+.montalban-topbar {
+  background: var(--montalban-dark);
+  color: #fff9f0;
+}
+
+.montalban-topbar-inner {
+  min-height: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.montalban-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: #f8ecdc;
+  font-size: 0.85rem;
+  transition: color 0.2s ease;
+}
+
+.montalban-back:hover {
+  color: var(--montalban-gold);
+}
+
+.montalban-topbar-label {
+  color: #d6c5b3;
+  font-size: 0.69rem;
+  letter-spacing: 0.14em;
+}
+
+/* PORTADA */
+
+.montalban-hero {
+  position: relative;
+  padding: 95px 0 100px;
+  background:
+    radial-gradient(
+      circle at 90% 15%,
+      rgba(197, 164, 109, 0.17),
+      transparent 28%
+    ),
+    linear-gradient(130deg, #fffdf9 0%, #f7f0e5 100%);
+}
+
+.montalban-hero-grid {
+  display: grid;
+  grid-template-columns: 1.04fr 0.96fr;
+  align-items: center;
+  gap: 74px;
+}
+
+.montalban-hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.montalban-eyebrow,
+.montalban-section-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--montalban-brown);
+  font-size: 0.73rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
+.montalban-eyebrow-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--montalban-gold);
+  box-shadow: 0 0 0 5px rgba(197, 164, 109, 0.16);
+}
+
+.montalban-hero h1 {
+  margin: 25px 0 23px;
+  color: var(--montalban-dark);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(3.5rem, 6.3vw, 5.7rem);
+  font-weight: 500;
+  letter-spacing: -0.065em;
+  line-height: 0.98;
+}
+
+.montalban-hero h1 span {
+  display: block;
+  margin-top: 9px;
+  color: var(--montalban-brown);
+  font-style: italic;
+  font-weight: 400;
+}
+
+.montalban-hero-description {
+  max-width: 530px;
+  color: var(--montalban-muted);
+  font-size: 1.03rem;
+  line-height: 1.9;
+}
+
+.montalban-hero-location {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 9px;
+  margin-top: 24px;
+  color: var(--montalban-brown);
+  font-size: 0.85rem;
+}
+
+.montalban-location-separator {
+  color: var(--montalban-gold);
+  font-size: 1.3rem;
+}
+
+.montalban-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 13px;
+  margin-top: 31px;
+}
+
+.montalban-button {
+  min-height: 50px;
+  padding: 0 21px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.montalban-button:hover {
+  transform: translateY(-3px);
+}
+
+.montalban-button-primary {
+  background: var(--montalban-brown);
+  color: white;
+}
+
+.montalban-button-primary:hover {
+  background: var(--montalban-dark);
+  color: white;
+}
+
+.montalban-button-secondary {
+  border-color: #d8c8b4;
+  color: var(--montalban-brown);
+  background: rgba(255, 255, 255, 0.48);
+}
+
+.montalban-button-secondary:hover {
+  border-color: var(--montalban-brown);
+  color: var(--montalban-dark);
+}
+
+.montalban-hero-note {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-top: 25px;
+  color: #746a5d;
+  font-size: 0.79rem;
+}
+
+.montalban-hero-note svg {
+  flex-shrink: 0;
+  color: #7d8b59;
+}
+
+/* IMAGEN DE PORTADA */
+
+.montalban-cover-wrap {
+  position: relative;
+  padding: 0 12px 12px 0;
+}
+
+.montalban-cover-decoration {
+  position: absolute;
+  top: -20px;
+  right: -8px;
+  width: 72%;
+  height: 70%;
+  border: 1px solid rgba(197, 164, 109, 0.7);
+  border-radius: 3px;
+}
+
+.montalban-cover-card {
+  position: relative;
+  padding: 11px;
+  border: 1px solid rgba(86, 58, 45, 0.16);
+  background: #fffdf9;
+  box-shadow: 0 25px 65px rgba(52, 35, 28, 0.15);
+}
+
+.montalban-cover-image {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  object-position: center;
+  background: var(--montalban-cream);
+}
+
+.montalban-cover-caption {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 20px 11px 11px;
+}
+
+.montalban-cover-caption-label {
+  color: #9a7a4c;
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+}
+
+.montalban-cover-caption h2 {
+  margin: 7px 0 0;
+  color: var(--montalban-brown);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.55rem;
+  font-weight: 500;
+}
+
+.montalban-cover-icon {
+  display: grid;
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  place-items: center;
+  border: 1px solid var(--montalban-border);
+  border-radius: 50%;
+  color: var(--montalban-brown);
+}
+
+.montalban-floating-badge {
+  position: absolute;
+  right: -29px;
+  bottom: 65px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 15px 19px;
+  background: #fffdf9;
+  border: 1px solid var(--montalban-border);
+  box-shadow: 0 12px 32px rgba(52, 35, 28, 0.1);
+}
+
+.montalban-floating-badge > svg {
+  color: #a47c42;
+}
+
+.montalban-floating-badge strong,
+.montalban-floating-badge span {
+  display: block;
+}
+
+.montalban-floating-badge strong {
+  color: var(--montalban-brown);
+  font-size: 0.82rem;
+}
+
+.montalban-floating-badge span {
+  margin-top: 4px;
+  color: var(--montalban-muted);
+  font-size: 0.71rem;
+}
+
+/* INFORMACIÓN DEL PROYECTO */
+
+.montalban-project-info {
+  background: #fff;
+  border-top: 1px solid var(--montalban-border);
+  border-bottom: 1px solid var(--montalban-border);
+}
+
+.montalban-info-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.montalban-info-item {
+  padding: 28px 23px;
+  border-right: 1px solid var(--montalban-border);
+}
+
+.montalban-info-item:first-child {
+  border-left: 1px solid var(--montalban-border);
+}
+
+.montalban-info-label {
+  display: block;
+  margin-bottom: 9px;
+  color: #9a8979;
+  font-size: 0.66rem;
+  font-weight: 800;
+  letter-spacing: 0.09em;
+}
+
+.montalban-info-item strong {
+  color: var(--montalban-brown);
+  font-size: 0.94rem;
+  font-weight: 700;
+}
+
+/* SECCIONES GENERALES */
+
+.montalban-section {
+  padding: 100px 0;
+}
+
+.montalban-section-kicker > span {
+  color: #b28c54;
+}
+
+.montalban-about-grid {
+  display: grid;
+  grid-template-columns: 0.92fr 1.08fr;
+  gap: 95px;
+}
+
+.montalban-section-heading h2,
+.montalban-centered-heading h2,
+.montalban-experience-copy h2,
+.montalban-design-copy h2,
+.montalban-learning-intro h2 {
+  margin: 24px 0 0;
+  color: var(--montalban-dark);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2.2rem, 4vw, 3.35rem);
+  font-weight: 500;
+  letter-spacing: -0.045em;
+  line-height: 1.15;
+}
+
+.montalban-section-heading h2 em,
+.montalban-experience-copy h2 em {
+  color: #97734c;
+  font-weight: 400;
+}
+
+.montalban-about-text > p,
+.montalban-experience-copy > p,
+.montalban-design-copy > p,
+.montalban-learning-intro > p {
+  color: var(--montalban-muted);
+  font-size: 0.96rem;
+  line-height: 1.95;
+}
+
+.montalban-about-text > p:first-child {
+  margin-top: 0;
+}
+
+.montalban-about-text > p + p {
+  margin-top: 18px;
+}
+
+.montalban-highlight {
+  display: flex;
+  align-items: flex-start;
+  gap: 17px;
+  margin-top: 30px;
+  padding: 23px;
+  background: var(--montalban-cream);
+  border-left: 3px solid var(--montalban-gold);
+}
+
+.montalban-highlight-icon {
+  display: grid;
+  width: 45px;
+  height: 45px;
+  flex-shrink: 0;
+  place-items: center;
+  color: var(--montalban-brown);
+  background: #fffdf9;
+}
+
+.montalban-highlight strong {
+  display: block;
+  color: var(--montalban-brown);
+  font-size: 0.93rem;
+}
+
+.montalban-highlight p {
+  margin: 8px 0 0;
+  color: var(--montalban-muted);
+  font-size: 0.85rem;
+  line-height: 1.7;
+}
+
+/* FUNCIONALIDADES */
+
+.montalban-features {
+  background: var(--montalban-cream);
+}
+
+.montalban-centered-heading {
+  max-width: 680px;
+  margin: 0 auto 48px;
+  text-align: center;
+}
+
+.montalban-centered-heading h2 {
+  margin-top: 19px;
+}
+
+.montalban-centered-heading > p {
+  max-width: 560px;
+  margin: 17px auto 0;
+  color: var(--montalban-muted);
+  font-size: 0.94rem;
+  line-height: 1.8;
+}
+
+.montalban-features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.montalban-feature-card {
+  position: relative;
+  min-height: 260px;
+  padding: 30px 27px 33px;
+  background: #fffdf9;
+  border: 1px solid #e9dfd2;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.montalban-feature-card:hover {
+  transform: translateY(-5px);
+  border-color: #c8ac7f;
+  box-shadow: 0 15px 34px rgba(52, 35, 28, 0.07);
+}
+
+.montalban-feature-icon {
+  display: grid;
+  width: 53px;
+  height: 53px;
+  place-items: center;
+  color: var(--montalban-brown);
+  background: var(--montalban-cream);
+}
+
+.montalban-feature-card h3 {
+  margin: 24px 0 12px;
+  color: var(--montalban-brown);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.26rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.montalban-feature-card p {
+  margin: 0;
+  color: var(--montalban-muted);
+  font-size: 0.86rem;
+  line-height: 1.8;
+}
+
+.montalban-feature-line {
+  position: absolute;
+  bottom: 0;
+  left: 27px;
+  width: 44px;
+  height: 3px;
+  background: var(--montalban-gold);
+}
+
+/* RECORRIDO DEL USUARIO */
+
+.montalban-experience-grid {
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  align-items: center;
+  gap: 90px;
+}
+
+.montalban-experience-copy > p {
+  margin-top: 23px;
+}
+
+.montalban-text-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 18px;
+  color: var(--montalban-brown);
+  font-size: 0.88rem;
+  font-weight: 800;
+}
+
+.montalban-text-link:hover {
+  color: #a47c42;
+}
+
+.montalban-steps {
+  display: flex;
+  flex-direction: column;
+}
+
+.montalban-step {
+  display: grid;
+  grid-template-columns: 55px 1fr;
+  gap: 22px;
+  padding: 26px 0;
+  border-bottom: 1px solid var(--montalban-border);
+}
+
+.montalban-step:first-child {
+  padding-top: 0;
+}
+
+.montalban-step:last-child {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.montalban-step-number {
+  display: grid;
+  width: 49px;
+  height: 49px;
+  place-items: center;
+  border: 1px solid #d9c7ad;
+  color: #9a7546;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.15rem;
+}
+
+.montalban-step h3 {
+  margin: 2px 0 9px;
+  color: var(--montalban-brown);
+  font-size: 1rem;
+  font-weight: 750;
+}
+
+.montalban-step p {
+  margin: 0;
+  color: var(--montalban-muted);
+  font-size: 0.87rem;
+  line-height: 1.8;
+}
+
+/* IDENTIDAD VISUAL */
+
+.montalban-design {
+  padding-top: 0;
+}
+
+.montalban-design-panel {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  align-items: center;
+  gap: 65px;
+  padding: 58px;
+  background: #f4eadb;
+}
+
+.montalban-design-copy h2 {
+  margin-top: 19px;
+}
+
+.montalban-design-copy > p {
+  margin-top: 19px;
+}
+
+.montalban-tech-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin-top: 23px;
+}
+
+.montalban-tech-list span {
+  padding: 9px 12px;
+  border: 1px solid #d8c5ac;
+  color: var(--montalban-brown);
+  background: rgba(255, 253, 249, 0.55);
+  font-size: 0.75rem;
+  font-weight: 650;
+}
+
+.montalban-palette {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.montalban-color-swatch {
+  min-height: 140px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 5px;
+  padding: 17px;
+  border: 1px solid rgba(52, 35, 28, 0.08);
+}
+
+.montalban-color-swatch span {
+  font-size: 0.87rem;
+  font-weight: 800;
+}
+
+.montalban-color-swatch small {
+  font-size: 0.72rem;
+  opacity: 0.8;
+}
+
+.montalban-color-cream {
+  background: #f7f0e5;
+  color: #563a2d;
+}
+
+.montalban-color-brown {
+  background: #563a2d;
+  color: #fff9f0;
+}
+
+.montalban-color-gold {
+  background: #c5a46d;
+  color: #34231c;
+}
+
+.montalban-color-white {
+  background: #fff;
+  color: #563a2d;
+}
+
+/* VALOR DEL PROYECTO */
+
+.montalban-learning-grid {
+  display: grid;
+  grid-template-columns: 1fr 0.9fr;
+  align-items: start;
+  gap: 95px;
+}
+
+.montalban-learning-intro h2 {
+  margin-top: 21px;
+}
+
+.montalban-learning-intro > p {
+  margin-top: 20px;
+}
+
+.montalban-learning-points {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  padding: 8px 0;
+}
+
+.montalban-learning-points > div {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  padding: 21px 0;
+  border-bottom: 1px solid var(--montalban-border);
+  color: var(--montalban-brown);
+}
+
+.montalban-learning-points > div:first-child {
+  padding-top: 0;
+}
+
+.montalban-learning-points > div:last-child {
+  border-bottom: 0;
+}
+
+.montalban-learning-points svg {
+  flex-shrink: 0;
+  color: #a47c42;
+}
+
+.montalban-learning-points span {
+  font-size: 0.9rem;
+  font-weight: 650;
+  line-height: 1.6;
+}
+
+/* CTA PARA EXPLORAR FIGMA */
+
+.montalban-cta-section {
+  padding: 0 0 85px;
+}
+
+.montalban-cta-card {
+  position: relative;
+  overflow: hidden;
+  padding: 75px 25px;
+  background:
+    radial-gradient(
+      circle at 90% 20%,
+      rgba(197, 164, 109, 0.19),
+      transparent 32%
+    ),
+    var(--montalban-dark);
+  color: #fff9f0;
+  text-align: center;
+}
+
+.montalban-cta-decoration {
+  position: absolute;
+  top: 28px;
+  right: 35px;
+  color: rgba(255, 249, 240, 0.08);
+  transform: rotate(12deg);
+}
+
+.montalban-cta-eyebrow {
+  color: #d8ba88;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+}
+
+.montalban-cta-card h2 {
+  max-width: 680px;
+  margin: 20px auto 16px;
+  color: #fff9f0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2.2rem, 4.5vw, 3.5rem);
+  font-weight: 500;
+  letter-spacing: -0.04em;
+  line-height: 1.15;
+}
+
+.montalban-cta-card > p {
+  max-width: 580px;
+  margin: 0 auto;
+  color: #d6c5b3;
+  font-size: 0.95rem;
+  line-height: 1.8;
+}
+
+.montalban-button-light {
+  margin-top: 29px;
+  background: var(--montalban-cream);
+  color: var(--montalban-brown);
+}
+
+.montalban-button-light:hover {
+  background: #fff;
+  color: var(--montalban-dark);
+}
+
+.montalban-cta-card > small {
+  display: block;
+  max-width: 600px;
+  margin: 23px auto 0;
+  color: #cbb9a7;
+  font-size: 0.75rem;
+  line-height: 1.7;
+}
+
+/* CONTACTO PARA POTENCIALES CLIENTES */
+
+.montalban-contact-section {
+  padding: 0 0 100px;
+  background: var(--montalban-paper);
+}
+
+.montalban-contact-card {
+  position: relative;
+  overflow: hidden;
+  padding: 65px 30px;
+  border: 1px solid var(--montalban-border);
+  background: linear-gradient(135deg, #f7f0e5, #fffdf9);
+  text-align: center;
+}
+
+.montalban-contact-eyebrow {
+  color: #9a7546;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+}
+
+.montalban-contact-card h2 {
+  max-width: 760px;
+  margin: 20px auto;
+  color: var(--montalban-dark);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2rem, 4.5vw, 3.3rem);
+  font-weight: 500;
+  letter-spacing: -0.04em;
+  line-height: 1.2;
+}
+
+.montalban-contact-card p {
+  max-width: 690px;
+  margin: 0 auto 15px;
+  color: var(--montalban-muted);
+  font-size: 0.95rem;
+  line-height: 1.9;
+}
+
+.montalban-contact-button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 11px;
+  min-height: 54px;
+  margin-top: 18px;
+  padding: 0 25px;
+  border-radius: 4px;
+  background: #563a2d;
+  color: #fffdf9;
+  font-size: 0.9rem;
+  font-weight: 750;
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease;
+}
+
+.montalban-contact-button:hover {
+  background: #34231c;
+  color: #fffdf9;
+  transform: translateY(-3px);
+}
+
+.montalban-contact-note {
+  display: block;
+  margin-top: 20px;
+  color: #817366;
+  font-size: 0.78rem;
+}
+
+/* PIE DE PÁGINA */
+
+.montalban-footer {
+  background: #291c16;
+  color: #d6c5b3;
+}
+
+.montalban-footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  min-height: 76px;
+}
+
+.montalban-footer-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: #f4e8d8;
+  font-size: 0.82rem;
+  transition: color 0.2s ease;
+}
+
+.montalban-footer-back:hover {
+  color: var(--montalban-gold);
+}
+
+.montalban-footer-inner > span {
+  font-size: 0.76rem;
+  text-align: right;
+}
+
+/* TABLETS */
+
+@media (max-width: 1000px) {
+  .montalban-hero-grid {
+    gap: 42px;
+  }
+
+  .montalban-hero {
+    padding: 75px 0;
+  }
+
+  .montalban-floating-badge {
+    right: -12px;
+  }
+
+  .montalban-about-grid,
+  .montalban-experience-grid,
+  .montalban-learning-grid {
+    gap: 48px;
+  }
+
+  .montalban-design-panel {
+    gap: 35px;
+    padding: 38px;
+  }
+
+  .montalban-features-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .montalban-feature-card {
+    min-height: 235px;
+  }
+}
+
+/* MÓVILES */
+
+@media (max-width: 700px) {
+  .montalban-container {
+    width: min(100% - 34px, 540px);
+  }
+
+  .montalban-topbar-inner {
+    min-height: 52px;
+  }
+
+  .montalban-topbar-label {
+    font-size: 0.57rem;
+    letter-spacing: 0.07em;
+    text-align: right;
+  }
+
+  .montalban-back {
+    font-size: 0.77rem;
+  }
+
+  .montalban-hero {
+    padding: 60px 0 66px;
+  }
+
+  .montalban-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .montalban-hero h1 {
+    font-size: clamp(3.25rem, 13vw, 4.6rem);
+  }
+
+  .montalban-hero-description {
+    font-size: 0.94rem;
+  }
+
+  .montalban-hero-actions {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .montalban-button {
+    width: 100%;
+  }
+
+  .montalban-cover-wrap {
+    margin: 0 9px 0 0;
+  }
+
+  .montalban-floating-badge {
+    right: -6px;
+    bottom: 49px;
+    padding: 12px;
+  }
+
+  .montalban-floating-badge strong {
+    font-size: 0.76rem;
+  }
+
+  .montalban-floating-badge span {
+    font-size: 0.66rem;
+  }
+
+  .montalban-info-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .montalban-info-item {
+    padding: 21px 14px;
+    border-bottom: 1px solid var(--montalban-border);
+  }
+
+  .montalban-info-item:nth-child(odd) {
+    border-left: 1px solid var(--montalban-border);
+  }
+
+  .montalban-info-item:nth-child(even) {
+    border-right: 1px solid var(--montalban-border);
+  }
+
+  .montalban-info-label {
+    font-size: 0.6rem;
+  }
+
+  .montalban-info-item strong {
+    font-size: 0.81rem;
+  }
+
+  .montalban-section {
+    padding: 70px 0;
+  }
+
+  .montalban-about-grid,
+  .montalban-experience-grid,
+  .montalban-learning-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .montalban-section-heading h2,
+  .montalban-centered-heading h2,
+  .montalban-experience-copy h2,
+  .montalban-design-copy h2,
+  .montalban-learning-intro h2 {
+    font-size: clamp(2.1rem, 9vw, 2.8rem);
+  }
+
+  .montalban-centered-heading {
+    margin-bottom: 32px;
+  }
+
+  .montalban-features-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .montalban-feature-card {
+    min-height: auto;
+    padding: 25px 23px 30px;
+  }
+
+  .montalban-feature-card h3 {
+    margin-top: 19px;
+  }
+
+  .montalban-design {
+    padding-top: 0;
+  }
+
+  .montalban-design-panel {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    padding: 27px 21px;
+  }
+
+  .montalban-palette {
+    gap: 10px;
+  }
+
+  .montalban-color-swatch {
+    min-height: 112px;
+    padding: 12px;
+  }
+
+  .montalban-color-swatch span {
+    font-size: 0.8rem;
+  }
+
+  .montalban-color-swatch small {
+    font-size: 0.66rem;
+  }
+
+  .montalban-cta-section {
+    padding-bottom: 65px;
+  }
+
+  .montalban-cta-card {
+    padding: 60px 22px;
+  }
+
+  .montalban-cta-decoration {
+    top: 12px;
+    right: 12px;
+  }
+
+  .montalban-cta-card h2 {
+    font-size: clamp(2rem, 8vw, 2.8rem);
+  }
+
+  .montalban-contact-section {
+    padding-bottom: 70px;
+  }
+
+  .montalban-contact-card {
+    padding: 45px 20px;
+  }
+
+  .montalban-contact-card h2 {
+    font-size: clamp(1.9rem, 8vw, 2.5rem);
+  }
+
+  .montalban-contact-card p {
+    font-size: 0.88rem;
+  }
+
+  .montalban-contact-button {
+    width: 100%;
+    padding: 0 12px;
+    font-size: 0.82rem;
+  }
+
+  .montalban-footer-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 13px;
+    padding-top: 21px;
+    padding-bottom: 21px;
+  }
+
+  .montalban-footer-inner > span {
+    text-align: left;
+    line-height: 1.6;
+  }
+}
+
+/* ACCESIBILIDAD */
+
+@media (prefers-reduced-motion: reduce) {
+  .montalban-page *,
+  .montalban-page *::before,
+  .montalban-page *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}

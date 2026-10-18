@@ -1,0 +1,1617 @@
+﻿
+/* ========================================
+   FC ELECTRO - ESTILOS GENERALES
+======================================== */
+
+.felectro-detalle {
+  --fe-azul: #3984ff;
+  --fe-azul-claro: #78b5ff;
+  --fe-azul-oscuro: #102c55;
+  --fe-fondo: #080d16;
+  --fe-fondo-secundario: #0d1421;
+  --fe-tarjeta: #111b2b;
+  --fe-borde: rgba(143, 174, 220, 0.15);
+  --fe-texto: #f2f6ff;
+  --fe-texto-secundario: #a5b3c9;
+
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background: var(--fe-fondo);
+  color: var(--fe-texto);
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.felectro-detalle *,
+.felectro-detalle *::before,
+.felectro-detalle *::after {
+  box-sizing: border-box;
+}
+
+.felectro-detalle img {
+  display: block;
+  max-width: 100%;
+}
+
+.felectro-detalle a {
+  text-decoration: none;
+}
+
+.felectro-contenedor {
+  width: min(1180px, calc(100% - 48px));
+  margin-inline: auto;
+}
+
+.felectro-seccion {
+  position: relative;
+  padding: 105px 0;
+  background: var(--fe-fondo);
+}
+
+.felectro-seccion:nth-of-type(even) {
+  background: var(--fe-fondo-secundario);
+}
+
+.felectro-numero-seccion {
+  display: inline-block;
+  color: var(--fe-azul-claro);
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+  line-height: 1.5;
+}
+
+.felectro-detalle h1,
+.felectro-detalle h2,
+.felectro-detalle h3,
+.felectro-detalle p {
+  margin-top: 0;
+}
+
+.felectro-detalle h1,
+.felectro-detalle h2,
+.felectro-detalle h3 {
+  color: var(--fe-texto);
+  font-family: inherit;
+}
+
+.felectro-detalle h2 {
+  margin-bottom: 22px;
+  font-size: clamp(2rem, 3.5vw, 3.1rem);
+  font-weight: 800;
+  line-height: 1.16;
+  letter-spacing: -0.045em;
+}
+
+.felectro-detalle h2 span,
+.felectro-detalle h1 span {
+  color: var(--fe-azul-claro);
+}
+
+.felectro-detalle p {
+  color: var(--fe-texto-secundario);
+}
+
+.felectro-detalle svg {
+  flex-shrink: 0;
+}
+
+/* ========================================
+   BOTONES Y ENLACES
+======================================== */
+
+.felectro-boton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 11px;
+  min-height: 49px;
+  padding: 12px 20px;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  font-size: 0.91rem;
+  font-weight: 750;
+  line-height: 1.4;
+  text-align: center;
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.felectro-boton:hover {
+  transform: translateY(-3px);
+}
+
+.felectro-boton-principal {
+  background: var(--fe-azul);
+  color: #ffffff;
+  box-shadow: 0 9px 28px rgba(57, 132, 255, 0.2);
+}
+
+.felectro-boton-principal:hover {
+  background: #246fe8;
+  color: #ffffff;
+  box-shadow: 0 12px 32px rgba(57, 132, 255, 0.3);
+}
+
+.felectro-boton-secundario {
+  border-color: rgba(152, 184, 231, 0.27);
+  background: rgba(255, 255, 255, 0.035);
+  color: var(--fe-texto);
+}
+
+.felectro-boton-secundario:hover {
+  border-color: var(--fe-azul);
+  background: rgba(57, 132, 255, 0.1);
+  color: #ffffff;
+}
+
+.felectro-volver {
+  position: relative;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  margin-bottom: 48px;
+  color: var(--fe-texto-secundario);
+  font-size: 0.9rem;
+  font-weight: 650;
+  transition: color 0.2s ease;
+}
+
+.felectro-volver:hover {
+  color: var(--fe-azul-claro);
+}
+
+.felectro-enlace-texto {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  margin-top: 12px;
+  color: var(--fe-azul-claro);
+  font-size: 0.93rem;
+  font-weight: 750;
+  transition:
+    gap 0.2s ease,
+    color 0.2s ease;
+}
+
+.felectro-enlace-texto:hover {
+  gap: 14px;
+  color: #ffffff;
+}
+
+/* ========================================
+   HERO
+======================================== */
+
+.felectro-hero {
+  position: relative;
+  isolation: isolate;
+  padding: 45px 0 95px;
+  overflow: hidden;
+  background:
+    radial-gradient(
+      ellipse at 80% 30%,
+      rgba(29, 81, 153, 0.22),
+      transparent 43%
+    ),
+    linear-gradient(135deg, #080d16 0%, #0b1424 58%, #09101c 100%);
+}
+
+.felectro-fondo {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.felectro-orbe {
+  position: absolute;
+  display: block;
+  border-radius: 50%;
+  filter: blur(2px);
+}
+
+.felectro-orbe-uno {
+  top: 5%;
+  right: -180px;
+  width: 490px;
+  height: 490px;
+  border: 1px solid rgba(86, 153, 255, 0.14);
+  background: radial-gradient(
+    circle,
+    rgba(37, 104, 202, 0.12),
+    transparent 68%
+  );
+}
+
+.felectro-orbe-dos {
+  bottom: -230px;
+  left: -180px;
+  width: 420px;
+  height: 420px;
+  background: radial-gradient(
+    circle,
+    rgba(37, 104, 202, 0.11),
+    transparent 70%
+  );
+}
+
+.felectro-cuadricula {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(
+      rgba(126, 169, 230, 0.035) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(126, 169, 230, 0.035) 1px,
+      transparent 1px
+    );
+  background-size: 48px 48px;
+  mask-image: linear-gradient(
+    to bottom,
+    black,
+    transparent 90%
+  );
+}
+
+.felectro-hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.02fr) minmax(0, 0.98fr);
+  align-items: center;
+  gap: 62px;
+}
+
+.felectro-hero-texto {
+  min-width: 0;
+}
+
+.felectro-etiquetas {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.felectro-etiqueta,
+.felectro-etiqueta-secundaria {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  min-height: 32px;
+  padding: 6px 11px;
+  border-radius: 6px;
+  font-size: 0.76rem;
+  font-weight: 750;
+}
+
+.felectro-etiqueta {
+  border: 1px solid rgba(81, 157, 255, 0.3);
+  background: rgba(57, 132, 255, 0.1);
+  color: #a8d0ff;
+}
+
+.felectro-etiqueta-secundaria {
+  border: 1px solid var(--fe-borde);
+  background: rgba(255, 255, 255, 0.035);
+  color: #c0cce0;
+}
+
+.felectro-sobretitulo {
+  margin-bottom: 12px;
+  color: #8eacd7 !important;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+}
+
+.felectro-hero h1 {
+  margin-bottom: 23px;
+  font-size: clamp(3.2rem, 6vw, 5.7rem);
+  font-weight: 900;
+  line-height: 0.98;
+  letter-spacing: -0.075em;
+}
+
+.felectro-resumen {
+  max-width: 550px;
+  margin-bottom: 29px;
+  color: #b2c0d6 !important;
+  font-size: 1.08rem;
+  line-height: 1.85;
+}
+
+.felectro-hero-acciones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 38px;
+}
+
+.felectro-datos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 23px;
+  padding-top: 24px;
+  border-top: 1px solid var(--fe-borde);
+}
+
+.felectro-datos > div {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+}
+
+.felectro-dato-titulo {
+  color: #8194b0;
+  font-size: 0.78rem;
+}
+
+.felectro-datos strong {
+  color: #e5edfa;
+  font-size: 0.87rem;
+  font-weight: 700;
+  line-height: 1.6;
+}
+
+/* ========================================
+   IMAGEN DESTACADA
+======================================== */
+
+.felectro-hero-visual {
+  position: relative;
+  min-width: 0;
+  padding: 15px 9px 30px;
+}
+
+.felectro-imagen-marco {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(145, 181, 235, 0.23);
+  border-radius: 17px;
+  background: #0b1320;
+  box-shadow:
+    0 30px 90px rgba(0, 0, 0, 0.36),
+    0 0 60px rgba(43, 118, 223, 0.09);
+  transform: rotate(0.5deg);
+}
+
+.felectro-imagen-barra {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 45px;
+  padding: 0 15px;
+  border-bottom: 1px solid var(--fe-borde);
+  background: #101a2a;
+  color: #9caec8;
+  font-size: 0.75rem;
+}
+
+.felectro-ventana-puntos {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.felectro-ventana-puntos span {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #42516a;
+}
+
+.felectro-ventana-puntos span:first-child {
+  background: #ed7278;
+}
+
+.felectro-ventana-puntos span:nth-child(2) {
+  background: #e6bc5c;
+}
+
+.felectro-ventana-puntos span:nth-child(3) {
+  background: #64c999;
+}
+
+.felectro-imagen-principal {
+  width: 100%;
+  aspect-ratio: 1.04 / 1;
+  object-fit: contain;
+  object-position: center;
+  background: #101827;
+}
+
+.felectro-imagen-pie {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  min-height: 43px;
+  padding: 10px 15px;
+  border-top: 1px solid var(--fe-borde);
+  color: #bac8de;
+  font-size: 0.78rem;
+}
+
+.felectro-pie-punto,
+.felectro-soporte-punto {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #5cbb96;
+  box-shadow: 0 0 12px rgba(92, 187, 150, 0.45);
+}
+
+.felectro-flotante {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding: 13px 16px;
+  border: 1px solid rgba(145, 181, 235, 0.22);
+  border-radius: 12px;
+  background: rgba(16, 27, 44, 0.94);
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.28);
+  backdrop-filter: blur(12px);
+}
+
+.felectro-flotante-productos {
+  bottom: 5px;
+  left: -24px;
+}
+
+.felectro-flotante-icono {
+  display: grid;
+  width: 39px;
+  height: 39px;
+  flex-shrink: 0;
+  place-items: center;
+  border-radius: 9px;
+  background: rgba(57, 132, 255, 0.15);
+  color: var(--fe-azul-claro);
+}
+
+.felectro-flotante > div:last-child {
+  display: flex;
+  flex-direction: column;
+}
+
+.felectro-flotante strong {
+  color: #f1f6ff;
+  font-size: 0.83rem;
+}
+
+.felectro-flotante span {
+  color: #a5b5ce;
+  font-size: 0.73rem;
+}
+
+.felectro-flotante-seguridad {
+  top: 52px;
+  right: -17px;
+  color: #a8d0ff;
+  font-size: 0.77rem;
+  font-weight: 750;
+}
+
+/* ========================================
+   DESCRIPCIÓN DEL PROYECTO
+======================================== */
+
+.felectro-descripcion-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+  align-items: start;
+  gap: 75px;
+}
+
+.felectro-titulo-seccion h2 {
+  margin-top: 20px;
+}
+
+.felectro-descripcion-texto p {
+  margin-bottom: 19px;
+  font-size: 0.96rem;
+  line-height: 1.95;
+}
+
+.felectro-descripcion-texto p:last-child {
+  margin-bottom: 0;
+}
+
+.felectro-cifras {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 17px;
+  margin-top: 55px;
+}
+
+.felectro-cifra {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 0;
+  padding: 24px;
+  border: 1px solid var(--fe-borde);
+  border-radius: 13px;
+  background: linear-gradient(
+    145deg,
+    rgba(24, 39, 61, 0.75),
+    rgba(13, 22, 36, 0.72)
+  );
+}
+
+.felectro-cifra-icono {
+  display: grid;
+  width: 45px;
+  height: 45px;
+  margin-bottom: 18px;
+  place-items: center;
+  border: 1px solid rgba(57, 132, 255, 0.19);
+  border-radius: 10px;
+  background: rgba(57, 132, 255, 0.1);
+  color: var(--fe-azul-claro);
+}
+
+.felectro-cifra strong {
+  margin-bottom: 6px;
+  color: var(--fe-texto);
+  font-size: 0.96rem;
+}
+
+.felectro-cifra > span {
+  color: var(--fe-texto-secundario);
+  font-size: 0.81rem;
+  line-height: 1.7;
+}
+
+/* ========================================
+   CABECERAS DE SECCIÓN
+======================================== */
+
+.felectro-cabecera-seccion {
+  max-width: 760px;
+  margin: 0 auto 45px;
+  text-align: center;
+}
+
+.felectro-cabecera-seccion h2 {
+  margin-top: 17px;
+}
+
+.felectro-cabecera-seccion > p {
+  max-width: 650px;
+  margin: 0 auto;
+  font-size: 0.96rem;
+  line-height: 1.85;
+}
+
+/* ========================================
+   FUNCIONALIDADES
+======================================== */
+
+.felectro-funcionalidades {
+  background:
+    radial-gradient(
+      ellipse at 50% 0%,
+      rgba(33, 79, 144, 0.13),
+      transparent 55%
+    ),
+    var(--fe-fondo-secundario);
+}
+
+.felectro-funciones-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.felectro-funcion-card {
+  min-width: 0;
+  min-height: 245px;
+  padding: 25px;
+  border: 1px solid var(--fe-borde);
+  border-radius: 14px;
+  background: linear-gradient(
+    150deg,
+    rgba(22, 34, 53, 0.94),
+    rgba(14, 23, 37, 0.95)
+  );
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.felectro-funcion-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(83, 151, 255, 0.45);
+  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.17);
+}
+
+.felectro-funcion-superior {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 26px;
+}
+
+.felectro-funcion-icono {
+  display: grid;
+  width: 48px;
+  height: 48px;
+  place-items: center;
+  border: 1px solid rgba(57, 132, 255, 0.2);
+  border-radius: 12px;
+  background: rgba(57, 132, 255, 0.12);
+  color: var(--fe-azul-claro);
+}
+
+.felectro-funcion-superior > span {
+  color: #627995;
+  font-size: 0.86rem;
+  font-weight: 850;
+}
+
+.felectro-funcion-card h3 {
+  margin-bottom: 11px;
+  font-size: 1.08rem;
+  font-weight: 800;
+}
+
+.felectro-funcion-card p {
+  margin-bottom: 0;
+  font-size: 0.88rem;
+  line-height: 1.8;
+}
+
+/* ========================================
+   CATÁLOGO Y CATEGORÍAS
+======================================== */
+
+.felectro-catalogo-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+  align-items: center;
+  gap: 75px;
+}
+
+.felectro-catalogo-texto h2 {
+  margin-top: 18px;
+}
+
+.felectro-catalogo-texto > p {
+  margin-bottom: 22px;
+  font-size: 0.96rem;
+  line-height: 1.9;
+}
+
+.felectro-busqueda-ejemplo {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  min-height: 54px;
+  margin: 28px 0 15px;
+  padding: 11px 13px;
+  border: 1px solid rgba(136, 167, 212, 0.21);
+  border-radius: 10px;
+  background: #101a2a;
+  color: #8296b5;
+}
+
+.felectro-busqueda-ejemplo > span:first-of-type {
+  flex: 1;
+  font-size: 0.82rem;
+}
+
+.felectro-busqueda-ejemplo svg {
+  color: var(--fe-azul-claro);
+}
+
+.felectro-busqueda-tecla {
+  padding: 5px 8px;
+  border-radius: 5px;
+  background: rgba(57, 132, 255, 0.13);
+  color: #a9ceff;
+  font-size: 0.7rem;
+  font-weight: 750;
+}
+
+.felectro-categorias-panel {
+  overflow: hidden;
+  border: 1px solid var(--fe-borde);
+  border-radius: 16px;
+  background: linear-gradient(
+    150deg,
+    #121e30,
+    #0c1523
+  );
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.17);
+}
+
+.felectro-categorias-cabecera {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 22px 23px;
+  border-bottom: 1px solid var(--fe-borde);
+}
+
+.felectro-categorias-icono {
+  display: grid;
+  width: 45px;
+  height: 45px;
+  flex-shrink: 0;
+  place-items: center;
+  border-radius: 10px;
+  background: rgba(57, 132, 255, 0.13);
+  color: var(--fe-azul-claro);
+}
+
+.felectro-categorias-cabecera > div:last-child {
+  display: flex;
+  flex-direction: column;
+}
+
+.felectro-categorias-cabecera strong {
+  color: var(--fe-texto);
+  font-size: 0.95rem;
+}
+
+.felectro-categorias-cabecera span {
+  color: var(--fe-texto-secundario);
+  font-size: 0.8rem;
+}
+
+.felectro-categorias-lista {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 18px;
+  padding: 12px 22px;
+}
+
+.felectro-categoria {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(143, 174, 220, 0.1);
+  color: #d4deed;
+  font-size: 0.84rem;
+  transition: color 0.2s ease;
+}
+
+.felectro-categoria:hover {
+  color: var(--fe-azul-claro);
+}
+
+.felectro-categoria > span:nth-child(2) {
+  flex: 1;
+}
+
+.felectro-categoria-numero {
+  color: #6681a8;
+  font-size: 0.7rem;
+  font-weight: 800;
+}
+
+.felectro-categoria svg {
+  color: #6885ad;
+}
+
+.felectro-categorias-pie {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 17px 23px;
+  border-top: 1px solid var(--fe-borde);
+  background: rgba(57, 132, 255, 0.055);
+  color: #9eb8dc;
+  font-size: 0.8rem;
+}
+
+.felectro-categorias-pie svg {
+  color: var(--fe-azul-claro);
+}
+
+/* ========================================
+   EXPERIENCIA DE COMPRA
+======================================== */
+
+.felectro-compra {
+  background:
+    radial-gradient(
+      ellipse at 50% 0%,
+      rgba(30, 76, 143, 0.12),
+      transparent 55%
+    ),
+    var(--fe-fondo-secundario);
+}
+
+.felectro-pasos {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 30px minmax(0, 1fr) 30px minmax(0, 1fr) 30px minmax(0, 1fr);
+  align-items: center;
+  gap: 12px;
+}
+
+.felectro-paso {
+  position: relative;
+  min-width: 0;
+  min-height: 252px;
+  padding: 24px 19px;
+  border: 1px solid var(--fe-borde);
+  border-radius: 13px;
+  background: rgba(17, 29, 47, 0.82);
+}
+
+.felectro-paso-numero {
+  position: absolute;
+  top: 17px;
+  right: 17px;
+  color: #617895;
+  font-size: 0.78rem;
+  font-weight: 850;
+}
+
+.felectro-paso-icono {
+  display: grid;
+  width: 48px;
+  height: 48px;
+  margin-bottom: 23px;
+  place-items: center;
+  border: 1px solid rgba(57, 132, 255, 0.2);
+  border-radius: 11px;
+  background: rgba(57, 132, 255, 0.12);
+  color: var(--fe-azul-claro);
+}
+
+.felectro-paso h3 {
+  margin-bottom: 9px;
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+.felectro-paso p {
+  margin-bottom: 0;
+  font-size: 0.81rem;
+  line-height: 1.8;
+}
+
+.felectro-paso-flecha {
+  display: grid;
+  place-items: center;
+  color: #5c8ed4;
+}
+
+.felectro-aviso-demo {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  margin-top: 30px;
+  padding: 21px 23px;
+  border: 1px solid rgba(91, 155, 255, 0.22);
+  border-radius: 12px;
+  background: rgba(35, 93, 173, 0.09);
+}
+
+.felectro-aviso-icono {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  flex-shrink: 0;
+  place-items: center;
+  border-radius: 10px;
+  background: rgba(57, 132, 255, 0.13);
+  color: var(--fe-azul-claro);
+}
+
+.felectro-aviso-demo strong {
+  display: block;
+  margin-bottom: 5px;
+  color: #e5efff;
+  font-size: 0.92rem;
+}
+
+.felectro-aviso-demo p {
+  margin-bottom: 0;
+  font-size: 0.85rem;
+  line-height: 1.8;
+}
+
+/* ========================================
+   SOPORTE TÉCNICO Y USUARIOS
+======================================== */
+
+.felectro-soporte-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+  align-items: center;
+  gap: 70px;
+}
+
+.felectro-soporte-texto h2 {
+  margin-top: 19px;
+}
+
+.felectro-soporte-texto > p {
+  margin-bottom: 17px;
+  font-size: 0.94rem;
+  line-height: 1.9;
+}
+
+.felectro-soporte-panel {
+  overflow: hidden;
+  border: 1px solid var(--fe-borde);
+  border-radius: 15px;
+  background: linear-gradient(
+    145deg,
+    #121e30,
+    #0d1625
+  );
+  box-shadow: 0 25px 65px rgba(0, 0, 0, 0.18);
+}
+
+.felectro-soporte-cabecera {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 21px;
+  border-bottom: 1px solid var(--fe-borde);
+}
+
+.felectro-soporte-cabecera-icono {
+  display: grid;
+  width: 43px;
+  height: 43px;
+  flex-shrink: 0;
+  place-items: center;
+  border-radius: 10px;
+  background: rgba(57, 132, 255, 0.13);
+  color: var(--fe-azul-claro);
+}
+
+.felectro-soporte-cabecera > div:nth-child(2) {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.felectro-soporte-cabecera strong {
+  color: var(--fe-texto);
+  font-size: 0.94rem;
+}
+
+.felectro-soporte-cabecera span:not(.felectro-soporte-punto) {
+  color: var(--fe-texto-secundario);
+  font-size: 0.78rem;
+}
+
+.felectro-soporte-contenido {
+  display: grid;
+  gap: 0;
+  padding: 10px 21px;
+}
+
+.felectro-soporte-linea {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 16px 0;
+  border-bottom: 1px solid rgba(143, 174, 220, 0.1);
+}
+
+.felectro-soporte-mini-icono {
+  display: grid;
+  width: 39px;
+  height: 39px;
+  flex-shrink: 0;
+  place-items: center;
+  border: 1px solid rgba(143, 174, 220, 0.13);
+  border-radius: 9px;
+  background: rgba(255, 255, 255, 0.025);
+  color: #93baff;
+}
+
+.felectro-soporte-linea > div:last-child {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.felectro-soporte-linea strong {
+  color: #e5edfa;
+  font-size: 0.86rem;
+}
+
+.felectro-soporte-linea span {
+  color: var(--fe-texto-secundario);
+  font-size: 0.77rem;
+  line-height: 1.6;
+}
+
+.felectro-roles {
+  padding: 18px 21px 22px;
+  border-top: 1px solid var(--fe-borde);
+  background: rgba(57, 132, 255, 0.045);
+}
+
+.felectro-roles-titulo {
+  display: block;
+  margin-bottom: 13px;
+  color: #a8bad4;
+  font-size: 0.77rem;
+  font-weight: 800;
+}
+
+.felectro-roles-lista {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.felectro-roles-lista span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 10px;
+  border: 1px solid rgba(143, 174, 220, 0.15);
+  border-radius: 7px;
+  background: rgba(255, 255, 255, 0.025);
+  color: #d0ddef;
+  font-size: 0.73rem;
+  font-weight: 650;
+}
+
+.felectro-roles-lista svg {
+  color: var(--fe-azul-claro);
+}
+
+/* ========================================
+   TECNOLOGÍAS
+======================================== */
+
+.felectro-tecnologias {
+  background:
+    radial-gradient(
+      ellipse at 0% 50%,
+      rgba(27, 73, 138, 0.1),
+      transparent 45%
+    ),
+    var(--fe-fondo-secundario);
+}
+
+.felectro-tecnologias-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  align-items: start;
+  gap: 75px;
+}
+
+.felectro-tecnologias-grid > div:first-child h2 {
+  margin-top: 19px;
+}
+
+.felectro-tecnologias-grid > div:first-child p {
+  font-size: 0.95rem;
+  line-height: 1.9;
+}
+
+.felectro-tecnologias-lista {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.felectro-tecnologia {
+  display: flex;
+  align-items: flex-start;
+  gap: 13px;
+  min-width: 0;
+  padding: 19px 16px;
+  border: 1px solid var(--fe-borde);
+  border-radius: 11px;
+  background: rgba(17, 29, 47, 0.72);
+}
+
+.felectro-tecnologia-simbolo {
+  display: grid;
+  width: 43px;
+  height: 43px;
+  flex-shrink: 0;
+  place-items: center;
+  border: 1px solid rgba(57, 132, 255, 0.18);
+  border-radius: 10px;
+  background: rgba(57, 132, 255, 0.11);
+  color: var(--fe-azul-claro);
+}
+
+.felectro-tecnologia-simbolo span {
+  font-size: 0.88rem;
+  font-weight: 900;
+}
+
+.felectro-tecnologia > div:last-child {
+  min-width: 0;
+}
+
+.felectro-tecnologia strong {
+  display: block;
+  margin-bottom: 5px;
+  color: #e8f0ff;
+  font-size: 0.9rem;
+}
+
+.felectro-tecnologia p {
+  margin-bottom: 0;
+  font-size: 0.78rem;
+  line-height: 1.7;
+}
+
+/* ========================================
+   CIERRE Y NEGOCIO
+======================================== */
+
+.felectro-negocio {
+  padding-top: 80px;
+  padding-bottom: 100px;
+  background:
+    radial-gradient(
+      ellipse at 50% 100%,
+      rgba(35, 100, 190, 0.17),
+      transparent 58%
+    ),
+    var(--fe-fondo);
+}
+
+.felectro-negocio-card {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 55px 45px;
+  overflow: hidden;
+  border: 1px solid rgba(105, 163, 245, 0.24);
+  border-radius: 19px;
+  background:
+    radial-gradient(
+      circle at 100% 0%,
+      rgba(57, 132, 255, 0.13),
+      transparent 42%
+    ),
+    linear-gradient(135deg, #111d30, #0b1422);
+  text-align: center;
+  box-shadow: 0 28px 70px rgba(0, 0, 0, 0.18);
+}
+
+.felectro-negocio-icono {
+  display: grid;
+  width: 57px;
+  height: 57px;
+  margin: 0 auto 22px;
+  place-items: center;
+  border: 1px solid rgba(89, 155, 255, 0.26);
+  border-radius: 15px;
+  background: rgba(57, 132, 255, 0.13);
+  color: var(--fe-azul-claro);
+}
+
+.felectro-negocio-card h2 {
+  max-width: 680px;
+  margin: 17px auto 20px;
+}
+
+.felectro-negocio-card > p {
+  max-width: 680px;
+  margin: 0 auto 24px;
+  font-size: 0.94rem;
+  line-height: 1.9;
+}
+
+.felectro-negocio-nota {
+  display: flex;
+  align-items: flex-start;
+  gap: 11px;
+  max-width: 690px;
+  margin: 0 auto 29px;
+  padding: 15px 17px;
+  border: 1px solid rgba(143, 174, 220, 0.14);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.025);
+  color: #aebed5;
+  font-size: 0.81rem;
+  line-height: 1.8;
+  text-align: left;
+}
+
+.felectro-negocio-nota svg {
+  margin-top: 3px;
+  color: var(--fe-azul-claro);
+}
+
+.felectro-negocio-acciones {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+/* ========================================
+   ANIMACIONES SUAVES
+======================================== */
+
+@media (prefers-reduced-motion: no-preference) {
+  .felectro-hero-texto {
+    animation: felectro-aparecer 0.65s ease both;
+  }
+
+  .felectro-hero-visual {
+    animation: felectro-aparecer 0.8s ease 0.1s both;
+  }
+
+  @keyframes felectro-aparecer {
+    from {
+      opacity: 0;
+      transform: translateY(15px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+/* ========================================
+   RESPONSIVE: TABLET
+======================================== */
+
+@media (max-width: 1050px) {
+  .felectro-seccion {
+    padding: 85px 0;
+  }
+
+  .felectro-hero-grid {
+    gap: 38px;
+  }
+
+  .felectro-hero h1 {
+    font-size: clamp(3.1rem, 6vw, 4.7rem);
+  }
+
+  .felectro-descripcion-grid,
+  .felectro-catalogo-grid,
+  .felectro-soporte-grid,
+  .felectro-tecnologias-grid {
+    gap: 42px;
+  }
+
+  .felectro-funciones-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .felectro-pasos {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+  }
+
+  .felectro-paso {
+    min-height: 220px;
+  }
+
+  .felectro-paso-flecha {
+    display: none;
+  }
+
+  .felectro-tecnologias-lista {
+    grid-template-columns: 1fr;
+  }
+
+  .felectro-flotante-seguridad {
+    right: -7px;
+  }
+
+  .felectro-flotante-productos {
+    left: -10px;
+  }
+}
+
+/* ========================================
+   RESPONSIVE: MÓVIL
+======================================== */
+
+@media (max-width: 760px) {
+  .felectro-contenedor {
+    width: min(100% - 36px, 600px);
+  }
+
+  .felectro-seccion {
+    padding: 68px 0;
+  }
+
+  .felectro-hero {
+    padding: 30px 0 65px;
+  }
+
+  .felectro-volver {
+    margin-bottom: 35px;
+  }
+
+  .felectro-hero-grid,
+  .felectro-descripcion-grid,
+  .felectro-catalogo-grid,
+  .felectro-soporte-grid,
+  .felectro-tecnologias-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 39px;
+  }
+
+  .felectro-hero h1 {
+    font-size: clamp(3.2rem, 13vw, 5rem);
+  }
+
+  .felectro-resumen {
+    font-size: 0.98rem;
+  }
+
+  .felectro-hero-visual {
+    width: calc(100% - 10px);
+    max-width: 540px;
+    margin: 0 auto;
+    padding: 8px 5px 28px;
+  }
+
+  .felectro-flotante {
+    padding: 10px 12px;
+  }
+
+  .felectro-flotante-productos {
+    left: -5px;
+  }
+
+  .felectro-flotante-seguridad {
+    top: 30px;
+    right: -5px;
+  }
+
+  .felectro-descripcion-grid {
+    gap: 22px;
+  }
+
+  .felectro-cifras {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin-top: 35px;
+  }
+
+  .felectro-cifra {
+    display: grid;
+    grid-template-columns: 45px minmax(0, 1fr);
+    column-gap: 14px;
+    align-items: center;
+    padding: 17px;
+  }
+
+  .felectro-cifra-icono {
+    grid-row: span 2;
+    margin-bottom: 0;
+  }
+
+  .felectro-cifra strong {
+    align-self: end;
+    margin-bottom: 2px;
+  }
+
+  .felectro-cifra > span {
+    align-self: start;
+  }
+
+  .felectro-cabecera-seccion {
+    margin-bottom: 32px;
+    text-align: left;
+  }
+
+  .felectro-cabecera-seccion > p {
+    margin-left: 0;
+  }
+
+  .felectro-funciones-grid {
+    grid-template-columns: 1fr;
+    gap: 13px;
+  }
+
+  .felectro-funcion-card {
+    min-height: auto;
+    padding: 22px;
+  }
+
+  .felectro-funcion-superior {
+    margin-bottom: 19px;
+  }
+
+  .felectro-categorias-lista {
+    gap: 0 12px;
+    padding-inline: 15px;
+  }
+
+  .felectro-categorias-cabecera,
+  .felectro-categorias-pie {
+    padding-inline: 16px;
+  }
+
+  .felectro-pasos {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .felectro-paso {
+    min-height: auto;
+    padding: 22px;
+  }
+
+  .felectro-paso-icono {
+    margin-bottom: 17px;
+  }
+
+  .felectro-tecnologias-lista {
+    grid-template-columns: 1fr;
+  }
+
+  .felectro-negocio-card {
+    padding: 38px 22px;
+  }
+
+  .felectro-negocio-acciones {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .felectro-negocio-acciones .felectro-boton {
+    width: 100%;
+  }
+}
+
+/* ========================================
+   RESPONSIVE: MÓVILES PEQUEÑOS
+======================================== */
+
+@media (max-width: 420px) {
+  .felectro-contenedor {
+    width: calc(100% - 28px);
+  }
+
+  .felectro-seccion {
+    padding: 55px 0;
+  }
+
+  .felectro-hero {
+    padding-top: 24px;
+  }
+
+  .felectro-etiquetas {
+    gap: 7px;
+  }
+
+  .felectro-etiqueta,
+  .felectro-etiqueta-secundaria {
+    font-size: 0.7rem;
+  }
+
+  .felectro-hero h1 {
+    font-size: 3.05rem;
+  }
+
+  .felectro-hero-acciones {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .felectro-hero-acciones .felectro-boton {
+    width: 100%;
+  }
+
+  .felectro-datos {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .felectro-imagen-barra {
+    min-height: 38px;
+    padding-inline: 10px;
+    font-size: 0.67rem;
+  }
+
+  .felectro-imagen-principal {
+    aspect-ratio: 0.95 / 1;
+  }
+
+  .felectro-flotante {
+    gap: 8px;
+    padding: 9px;
+  }
+
+  .felectro-flotante-icono {
+    width: 32px;
+    height: 32px;
+  }
+
+  .felectro-flotante strong {
+    font-size: 0.74rem;
+  }
+
+  .felectro-flotante span {
+    font-size: 0.65rem;
+  }
+
+  .felectro-flotante-seguridad {
+    font-size: 0.67rem;
+  }
+
+  .felectro-detalle h2 {
+    font-size: 2rem;
+  }
+
+  .felectro-categorias-lista {
+    grid-template-columns: 1fr;
+  }
+
+  .felectro-busqueda-ejemplo {
+    gap: 7px;
+    padding-inline: 9px;
+  }
+
+  .felectro-busqueda-ejemplo > span:first-of-type {
+    font-size: 0.73rem;
+  }
+
+  .felectro-busqueda-tecla {
+    font-size: 0.63rem;
+  }
+
+  .felectro-aviso-demo {
+    gap: 10px;
+    padding: 16px;
+  }
+
+  .felectro-aviso-icono {
+    width: 35px;
+    height: 35px;
+  }
+
+  .felectro-soporte-cabecera,
+  .felectro-soporte-contenido {
+    padding-inline: 15px;
+  }
+
+  .felectro-roles {
+    padding-inline: 15px;
+  }
+
+  .felectro-roles-lista {
+    gap: 6px;
+  }
+
+  .felectro-roles-lista span {
+    font-size: 0.68rem;
+  }
+
+  .felectro-negocio-card {
+    padding: 32px 16px;
+  }
+
+  .felectro-negocio-nota {
+    padding: 12px;
+    font-size: 0.75rem;
+  }
+}

@@ -1,0 +1,1400 @@
+﻿
+/* =========================================
+   LUXOL — PÁGINA DE DETALLE DEL PORTAFOLIO
+========================================= */
+
+.luxol {
+  --luxol-fondo: #11110f;
+  --luxol-fondo-secundario: #191916;
+  --luxol-tarjeta: #201f1b;
+  --luxol-crema: #f4efe5;
+  --luxol-texto: #c5c0b5;
+  --luxol-dorado: #c5a46d;
+  --luxol-dorado-claro: #e4c997;
+  --luxol-borde: rgba(218, 190, 139, 0.19);
+
+  position: relative;
+  overflow: hidden;
+  background: var(--luxol-fondo);
+  color: var(--luxol-crema);
+  font-family: inherit;
+  line-height: 1.7;
+}
+
+.luxol *,
+.luxol *::before,
+.luxol *::after {
+  box-sizing: border-box;
+}
+
+.luxol a {
+  text-decoration: none;
+}
+
+.luxol button,
+.luxol a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.luxol img {
+  display: block;
+  max-width: 100%;
+}
+
+.luxol-contenedor {
+  width: min(1180px, calc(100% - 48px));
+  margin-inline: auto;
+}
+
+.luxol-seccion {
+  position: relative;
+  padding: 105px 0;
+}
+
+.luxol-seccion h2 {
+  margin: 0;
+  color: var(--luxol-crema);
+  font-size: clamp(2rem, 4vw, 3.4rem);
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: -1.7px;
+}
+
+.luxol-seccion h2 span {
+  color: var(--luxol-dorado);
+}
+
+.luxol-seccion p {
+  color: var(--luxol-texto);
+}
+
+.luxol-subtitulo {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  margin-bottom: 24px;
+  color: var(--luxol-dorado);
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.luxol-subtitulo span:first-child {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 32px;
+  height: 32px;
+  border: 1px solid var(--luxol-borde);
+  border-radius: 50%;
+  font-size: 0.7rem;
+  letter-spacing: 0;
+}
+
+.luxol-etiqueta {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 10px 14px;
+  border: 1px solid var(--luxol-borde);
+  border-radius: 3px;
+  color: var(--luxol-dorado-claro);
+  background: rgba(197, 164, 109, 0.055);
+  font-size: 0.69rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.luxol-volver {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  margin-bottom: 34px;
+  color: var(--luxol-texto);
+  font-size: 0.87rem;
+  transition: color 0.25s ease;
+}
+
+.luxol-volver:hover {
+  color: var(--luxol-dorado-claro);
+}
+
+/* =========================================
+   BOTONES
+========================================= */
+
+.luxol-boton {
+  display: inline-flex;
+  min-height: 51px;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 13px 21px;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    border-color 0.25s ease,
+    color 0.25s ease;
+}
+
+.luxol-boton:hover {
+  transform: translateY(-3px);
+}
+
+.luxol-boton-principal {
+  background: var(--luxol-dorado);
+  color: #17140f;
+}
+
+.luxol-boton-principal:hover {
+  background: var(--luxol-dorado-claro);
+  color: #17140f;
+}
+
+.luxol-boton-secundario {
+  border-color: var(--luxol-borde);
+  background: rgba(255, 255, 255, 0.015);
+  color: var(--luxol-crema);
+}
+
+.luxol-boton-secundario:hover {
+  border-color: var(--luxol-dorado);
+  color: var(--luxol-dorado-claro);
+}
+
+.luxol-boton-whatsapp {
+  border-color: rgba(115, 191, 133, 0.4);
+  background: rgba(70, 145, 91, 0.1);
+  color: #bde5c7;
+}
+
+.luxol-boton-whatsapp:hover {
+  border-color: #73bf85;
+  background: rgba(70, 145, 91, 0.18);
+  color: #d9f3df;
+}
+
+/* =========================================
+   HERO
+========================================= */
+
+.luxol-hero {
+  position: relative;
+  display: flex;
+  min-height: 760px;
+  align-items: center;
+  padding: 75px 0 95px;
+  overflow: hidden;
+  border-bottom: 1px solid var(--luxol-borde);
+  background:
+    radial-gradient(
+      ellipse at 85% 40%,
+      rgba(151, 112, 54, 0.105),
+      transparent 40%
+    ),
+    linear-gradient(135deg, #11110f 0%, #171611 55%, #10100e 100%);
+}
+
+.luxol-hero-luz {
+  position: absolute;
+  width: 380px;
+  height: 380px;
+  border-radius: 50%;
+  pointer-events: none;
+  filter: blur(100px);
+  opacity: 0.1;
+}
+
+.luxol-hero-luz-uno {
+  top: -180px;
+  left: -100px;
+  background: #c5a46d;
+}
+
+.luxol-hero-luz-dos {
+  right: -160px;
+  bottom: -180px;
+  background: #92703c;
+}
+
+.luxol-hero-grid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1.02fr 0.98fr;
+  align-items: center;
+  gap: 75px;
+}
+
+.luxol-hero-contenido {
+  max-width: 590px;
+}
+
+.luxol-hero-contenido > .luxol-etiqueta {
+  margin-bottom: 23px;
+}
+
+.luxol-hero h1 {
+  margin: 0;
+  color: var(--luxol-crema);
+  font-size: clamp(5rem, 10vw, 9.1rem);
+  font-weight: 500;
+  line-height: 0.95;
+  letter-spacing: -7px;
+}
+
+.luxol-hero h1 span {
+  color: var(--luxol-dorado);
+}
+
+.luxol-hero-subtitulo {
+  margin: 18px 0 22px;
+  color: var(--luxol-dorado-claro);
+  font-size: clamp(1.15rem, 2vw, 1.55rem);
+  font-weight: 400;
+  letter-spacing: 0.2px;
+}
+
+.luxol-hero-descripcion {
+  max-width: 535px;
+  margin: 0;
+  color: var(--luxol-texto);
+  font-size: 1rem;
+  line-height: 1.95;
+}
+
+.luxol-hero-acciones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 13px;
+  margin-top: 32px;
+}
+
+.luxol-hero-datos {
+  display: flex;
+  align-items: center;
+  gap: 21px;
+  margin-top: 49px;
+}
+
+.luxol-hero-datos > div:not(.luxol-dato-separador) {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.luxol-dato-numero {
+  color: var(--luxol-crema);
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.luxol-dato-texto {
+  color: #aaa498;
+  font-size: 0.71rem;
+  line-height: 1.5;
+}
+
+.luxol-dato-separador {
+  width: 1px;
+  height: 43px;
+  background: var(--luxol-borde);
+}
+
+.luxol-dato-icono {
+  display: flex;
+  height: 35px;
+  align-items: center;
+  color: var(--luxol-dorado);
+}
+
+.luxol-hero-visual {
+  position: relative;
+  max-width: 510px;
+  margin-left: auto;
+}
+
+.luxol-marco-imagen {
+  position: relative;
+  padding: 13px;
+  border: 1px solid rgba(218, 190, 139, 0.34);
+  background: rgba(255, 255, 255, 0.018);
+  box-shadow: 0 35px 100px rgba(0, 0, 0, 0.32);
+}
+
+.luxol-imagen-portada {
+  width: 100%;
+  aspect-ratio: 4 / 4.6;
+  object-fit: cover;
+  object-position: center;
+  background: #24211a;
+}
+
+.luxol-imagen-etiqueta {
+  position: absolute;
+  z-index: 2;
+  top: 27px;
+  left: 27px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 12px;
+  background: rgba(16, 16, 14, 0.88);
+  color: var(--luxol-dorado-claro);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  backdrop-filter: blur(10px);
+}
+
+.luxol-imagen-pie {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 19px 10px 7px;
+  color: var(--luxol-dorado);
+}
+
+.luxol-imagen-pie > div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.luxol-imagen-pie-label {
+  color: #a9a194;
+  font-size: 0.62rem;
+  letter-spacing: 1.5px;
+}
+
+.luxol-imagen-pie strong {
+  color: var(--luxol-crema);
+  font-size: 0.98rem;
+  font-weight: 500;
+}
+
+.luxol-sello {
+  position: absolute;
+  right: -31px;
+  bottom: 95px;
+  display: flex;
+  width: 100px;
+  height: 100px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  border: 1px solid rgba(218, 190, 139, 0.55);
+  border-radius: 50%;
+  background: #181711;
+  color: var(--luxol-dorado-claro);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+.luxol-sello span {
+  font-size: 0.56rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.luxol-scroll {
+  position: absolute;
+  right: 24px;
+  bottom: 26px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #b6ad9c;
+  font-size: 0.64rem;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  transition: color 0.25s ease;
+}
+
+.luxol-scroll:hover {
+  color: var(--luxol-dorado-claro);
+}
+
+/* =========================================
+   CONCEPTO
+========================================= */
+
+.luxol-concepto {
+  background: var(--luxol-fondo-secundario);
+}
+
+.luxol-concepto-grid {
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  gap: 100px;
+  align-items: start;
+}
+
+.luxol-concepto-grid h2 {
+  max-width: 490px;
+}
+
+.luxol-concepto-texto > p:first-child {
+  margin-top: 0;
+}
+
+.luxol-concepto-texto p {
+  margin-bottom: 21px;
+  font-size: 0.98rem;
+  line-height: 1.95;
+}
+
+.luxol-valores {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 31px;
+}
+
+.luxol-valores > div {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 11px 13px;
+  border: 1px solid var(--luxol-borde);
+  color: var(--luxol-dorado-claro);
+  font-size: 0.78rem;
+}
+
+/* =========================================
+   ENCABEZADOS DE SECCIÓN
+========================================= */
+
+.luxol-encabezado {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 40px;
+  margin-bottom: 49px;
+}
+
+.luxol-encabezado > div {
+  max-width: 730px;
+}
+
+.luxol-encabezado > p {
+  max-width: 365px;
+  margin: 0 0 5px;
+  font-size: 0.92rem;
+  line-height: 1.85;
+}
+
+.luxol-encabezado-centro {
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.luxol-encabezado-centro > p {
+  max-width: 640px;
+  margin-top: 18px;
+}
+
+/* =========================================
+   FUNCIONALIDADES
+========================================= */
+
+.luxol-funcionalidades {
+  background: var(--luxol-fondo);
+}
+
+.luxol-funciones-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.luxol-funcion-card {
+  position: relative;
+  display: flex;
+  min-height: 260px;
+  flex-direction: column;
+  padding: 27px;
+  overflow: hidden;
+  border: 1px solid var(--luxol-borde);
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.025),
+    rgba(255, 255, 255, 0.005)
+  );
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    background 0.3s ease;
+}
+
+.luxol-funcion-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(218, 190, 139, 0.48);
+  background: rgba(197, 164, 109, 0.045);
+}
+
+.luxol-funcion-arriba {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 29px;
+}
+
+.luxol-funcion-icono {
+  display: flex;
+  width: 49px;
+  height: 49px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--luxol-borde);
+  color: var(--luxol-dorado);
+}
+
+.luxol-funcion-arriba > span {
+  color: #776b56;
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+}
+
+.luxol-funcion-card h3 {
+  margin: 0 0 10px;
+  color: var(--luxol-crema);
+  font-size: 1.13rem;
+  font-weight: 600;
+}
+
+.luxol-funcion-card p {
+  margin: 0;
+  font-size: 0.86rem;
+  line-height: 1.8;
+}
+
+.luxol-funcion-linea {
+  width: 35px;
+  height: 2px;
+  margin-top: auto;
+  padding-top: 0;
+  background: var(--luxol-dorado);
+  transform: translateY(15px);
+  transition: width 0.3s ease;
+}
+
+.luxol-funcion-card:hover .luxol-funcion-linea {
+  width: 70px;
+}
+
+/* =========================================
+   CATÁLOGO Y COLECCIONES
+========================================= */
+
+.luxol-catalogo {
+  background:
+    radial-gradient(
+      ellipse at 85% 45%,
+      rgba(150, 111, 56, 0.08),
+      transparent 42%
+    ),
+    var(--luxol-fondo-secundario);
+}
+
+.luxol-catalogo-grid {
+  display: grid;
+  grid-template-columns: 1fr 0.88fr;
+  gap: 85px;
+  align-items: center;
+}
+
+.luxol-catalogo-contenido > p {
+  margin: 25px 0;
+  font-size: 0.97rem;
+  line-height: 1.95;
+}
+
+.luxol-categorias {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin: 28px 0 31px;
+}
+
+.luxol-categorias span {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--luxol-crema);
+  font-size: 0.86rem;
+}
+
+.luxol-categorias svg {
+  flex-shrink: 0;
+  color: var(--luxol-dorado);
+}
+
+.luxol-enlace-texto {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--luxol-dorado-claro);
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: gap 0.25s ease;
+}
+
+.luxol-enlace-texto:hover {
+  gap: 16px;
+  color: var(--luxol-crema);
+}
+
+.luxol-catalogo-panel {
+  padding: 29px;
+  border: 1px solid rgba(218, 190, 139, 0.27);
+  background: linear-gradient(150deg, #24221c, #171713);
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.16);
+}
+
+.luxol-panel-cabecera {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--luxol-borde);
+  color: var(--luxol-dorado);
+}
+
+.luxol-panel-overline {
+  color: #b8a27b;
+  font-size: 0.63rem;
+  font-weight: 700;
+  letter-spacing: 1.7px;
+}
+
+.luxol-panel-cabecera h3 {
+  margin: 7px 0 0;
+  color: var(--luxol-crema);
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+.luxol-coleccion {
+  display: grid;
+  grid-template-columns: 39px 1fr 19px;
+  align-items: center;
+  gap: 13px;
+  padding: 23px 0;
+  border-bottom: 1px solid rgba(218, 190, 139, 0.12);
+}
+
+.luxol-coleccion-numero {
+  color: var(--luxol-dorado);
+  font-size: 0.78rem;
+}
+
+.luxol-coleccion > div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.luxol-coleccion strong {
+  color: var(--luxol-crema);
+  font-size: 0.98rem;
+  font-weight: 500;
+}
+
+.luxol-coleccion > div span {
+  color: #aaa498;
+  font-size: 0.78rem;
+}
+
+.luxol-coleccion > svg {
+  color: var(--luxol-dorado);
+}
+
+.luxol-panel-pie {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-top: 23px;
+  color: var(--luxol-dorado);
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 1.3px;
+}
+
+/* =========================================
+   RECORRIDO DE COMPRA
+========================================= */
+
+.luxol-compra {
+  background: var(--luxol-fondo);
+}
+
+.luxol-pasos {
+  display: grid;
+  grid-template-columns: 1fr 28px 1fr 28px 1fr 28px 1fr;
+  align-items: start;
+  gap: 15px;
+  margin-top: 57px;
+}
+
+.luxol-paso {
+  min-width: 0;
+  text-align: center;
+}
+
+.luxol-paso-numero {
+  display: block;
+  margin-bottom: 18px;
+  color: #84745b;
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+}
+
+.luxol-paso-icono {
+  display: flex;
+  width: 62px;
+  height: 62px;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  border: 1px solid rgba(218, 190, 139, 0.36);
+  color: var(--luxol-dorado);
+  background: rgba(197, 164, 109, 0.045);
+}
+
+.luxol-paso h3 {
+  margin: 0 0 10px;
+  color: var(--luxol-crema);
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.luxol-paso p {
+  margin: 0;
+  font-size: 0.82rem;
+  line-height: 1.8;
+}
+
+.luxol-paso-flecha {
+  display: flex;
+  justify-content: center;
+  padding-top: 91px;
+  color: #8e7957;
+}
+
+/* =========================================
+   TECNOLOGÍAS
+========================================= */
+
+.luxol-tecnologias {
+  background: var(--luxol-fondo-secundario);
+}
+
+.luxol-tecnologias-grid {
+  display: grid;
+  grid-template-columns: 1fr 0.85fr;
+  align-items: center;
+  gap: 90px;
+}
+
+.luxol-tecnologias-grid > div:first-child > p {
+  max-width: 570px;
+  margin-top: 25px;
+  font-size: 0.97rem;
+  line-height: 1.95;
+}
+
+.luxol-tecnologias-lista {
+  border-top: 1px solid var(--luxol-borde);
+}
+
+.luxol-tecnologia {
+  display: grid;
+  grid-template-columns: 45px 1fr 22px;
+  align-items: center;
+  gap: 15px;
+  padding: 21px 0;
+  border-bottom: 1px solid var(--luxol-borde);
+}
+
+.luxol-tecnologia-numero {
+  color: var(--luxol-dorado);
+  font-size: 0.75rem;
+}
+
+.luxol-tecnologia strong {
+  color: var(--luxol-crema);
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.luxol-tecnologia svg {
+  color: var(--luxol-dorado);
+}
+
+/* =========================================
+   ALCANCE Y TRANSPARENCIA
+========================================= */
+
+.luxol-alcance {
+  background: var(--luxol-fondo);
+}
+
+.luxol-alcance-card {
+  display: grid;
+  grid-template-columns: 65px 1fr;
+  gap: 30px;
+  padding: 43px;
+  border: 1px solid var(--luxol-borde);
+  background: linear-gradient(
+    130deg,
+    rgba(197, 164, 109, 0.055),
+    rgba(255, 255, 255, 0.012)
+  );
+}
+
+.luxol-alcance-icono {
+  display: flex;
+  width: 58px;
+  height: 58px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--luxol-borde);
+  color: var(--luxol-dorado);
+}
+
+.luxol-alcance-contenido h2 {
+  max-width: 750px;
+  font-size: clamp(1.8rem, 3.2vw, 2.7rem);
+}
+
+.luxol-alcance-contenido p {
+  max-width: 850px;
+  margin: 21px 0 0;
+  font-size: 0.91rem;
+  line-height: 1.9;
+}
+
+/* =========================================
+   CTA FINAL
+========================================= */
+
+.luxol-contacto {
+  padding-top: 45px;
+  background: var(--luxol-fondo);
+}
+
+.luxol-contacto-card {
+  position: relative;
+  padding: 67px 70px;
+  overflow: hidden;
+  border: 1px solid rgba(218, 190, 139, 0.3);
+  background:
+    radial-gradient(
+      ellipse at 95% 20%,
+      rgba(197, 164, 109, 0.12),
+      transparent 42%
+    ),
+    linear-gradient(130deg, #242118, #181813);
+}
+
+.luxol-contacto-contenido {
+  position: relative;
+  z-index: 1;
+  max-width: 760px;
+}
+
+.luxol-contacto-contenido > .luxol-etiqueta {
+  margin-bottom: 23px;
+}
+
+.luxol-contacto-contenido h2 {
+  max-width: 690px;
+  font-size: clamp(2.2rem, 4.5vw, 3.8rem);
+}
+
+.luxol-contacto-contenido h2 span {
+  color: var(--luxol-dorado);
+}
+
+.luxol-contacto-contenido > p {
+  max-width: 650px;
+  margin: 22px 0 29px;
+  font-size: 0.96rem;
+  line-height: 1.9;
+}
+
+.luxol-contacto-acciones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 13px;
+}
+
+.luxol-contacto-decoracion {
+  position: absolute;
+  top: 50%;
+  right: 40px;
+  color: rgba(197, 164, 109, 0.075);
+  transform: translateY(-50%) rotate(-12deg);
+  pointer-events: none;
+}
+
+.luxol-volver-final {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 30px;
+  color: #bcb3a3;
+  font-size: 0.82rem;
+  transition: color 0.25s ease;
+}
+
+.luxol-volver-final:hover {
+  color: var(--luxol-dorado-claro);
+}
+
+/* =========================================
+   ACCESIBILIDAD Y ANIMACIONES
+========================================= */
+
+@media (prefers-reduced-motion: no-preference) {
+  .luxol-hero-contenido {
+    animation: luxol-aparecer 0.65s ease both;
+  }
+
+  .luxol-hero-visual {
+    animation: luxol-aparecer 0.8s ease 0.1s both;
+  }
+
+  @keyframes luxol-aparecer {
+    from {
+      opacity: 0;
+      transform: translateY(18px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+.luxol a:focus-visible {
+  outline: 2px solid var(--luxol-dorado-claro);
+  outline-offset: 4px;
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1050px) {
+  .luxol-hero-grid {
+    gap: 42px;
+  }
+
+  .luxol-hero {
+    min-height: auto;
+  }
+
+  .luxol-hero h1 {
+    font-size: clamp(5rem, 9vw, 7rem);
+  }
+
+  .luxol-hero-datos {
+    gap: 13px;
+  }
+
+  .luxol-dato-texto {
+    font-size: 0.66rem;
+  }
+
+  .luxol-concepto-grid,
+  .luxol-catalogo-grid,
+  .luxol-tecnologias-grid {
+    gap: 55px;
+  }
+
+  .luxol-pasos {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 25px;
+  }
+
+  .luxol-paso-flecha {
+    display: none;
+  }
+
+  .luxol-funcion-card {
+    padding: 22px;
+  }
+}
+
+/* =========================================
+   TABLET PEQUEÑA
+========================================= */
+
+@media (max-width: 800px) {
+  .luxol-seccion {
+    padding: 78px 0;
+  }
+
+  .luxol-hero {
+    padding: 55px 0 90px;
+  }
+
+  .luxol-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 52px;
+  }
+
+  .luxol-hero-contenido {
+    max-width: 650px;
+  }
+
+  .luxol-hero-visual {
+    width: min(100%, 520px);
+    margin-inline: auto;
+  }
+
+  .luxol-imagen-portada {
+    aspect-ratio: 4 / 3.8;
+  }
+
+  .luxol-sello {
+    right: -15px;
+    bottom: 70px;
+  }
+
+  .luxol-concepto-grid,
+  .luxol-catalogo-grid,
+  .luxol-tecnologias-grid {
+    grid-template-columns: 1fr;
+    gap: 34px;
+  }
+
+  .luxol-concepto-grid h2 {
+    max-width: 650px;
+  }
+
+  .luxol-funciones-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .luxol-encabezado {
+    flex-direction: column;
+    align-items: start;
+    gap: 20px;
+  }
+
+  .luxol-encabezado > p {
+    max-width: 620px;
+  }
+
+  .luxol-encabezado-centro {
+    align-items: center;
+    text-align: center;
+  }
+
+  .luxol-pasos {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 40px 25px;
+  }
+
+  .luxol-alcance-card {
+    grid-template-columns: 1fr;
+    gap: 23px;
+    padding: 32px;
+  }
+
+  .luxol-contacto-card {
+    padding: 48px 38px;
+  }
+
+  .luxol-contacto-decoracion {
+    right: -45px;
+  }
+}
+
+/* =========================================
+   MÓVILES
+========================================= */
+
+@media (max-width: 520px) {
+  .luxol-contenedor {
+    width: calc(100% - 34px);
+  }
+
+  .luxol-seccion {
+    padding: 63px 0;
+  }
+
+  .luxol-seccion h2 {
+    font-size: clamp(1.9rem, 8vw, 2.55rem);
+    letter-spacing: -1px;
+  }
+
+  .luxol-hero {
+    padding: 35px 0 76px;
+  }
+
+  .luxol-volver {
+    margin-bottom: 28px;
+  }
+
+  .luxol-hero h1 {
+    font-size: clamp(4.5rem, 20vw, 6rem);
+    letter-spacing: -4px;
+  }
+
+  .luxol-hero-subtitulo {
+    font-size: 1.14rem;
+  }
+
+  .luxol-hero-descripcion {
+    font-size: 0.91rem;
+  }
+
+  .luxol-hero-acciones {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .luxol-boton {
+    width: 100%;
+  }
+
+  .luxol-hero-datos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-top: 35px;
+  }
+
+  .luxol-dato-separador {
+    display: none;
+  }
+
+  .luxol-dato-numero {
+    font-size: 1.6rem;
+  }
+
+  .luxol-dato-texto {
+    font-size: 0.7rem;
+  }
+
+  .luxol-hero-visual {
+    width: calc(100% - 12px);
+    margin-right: 12px;
+  }
+
+  .luxol-marco-imagen {
+    padding: 8px;
+  }
+
+  .luxol-imagen-portada {
+    aspect-ratio: 4 / 4.2;
+  }
+
+  .luxol-imagen-etiqueta {
+    top: 19px;
+    left: 19px;
+    font-size: 0.55rem;
+  }
+
+  .luxol-imagen-pie {
+    padding: 15px 6px 5px;
+  }
+
+  .luxol-imagen-pie strong {
+    font-size: 0.85rem;
+  }
+
+  .luxol-sello {
+    right: -12px;
+    bottom: 65px;
+    width: 80px;
+    height: 80px;
+  }
+
+  .luxol-sello span {
+    font-size: 0.49rem;
+  }
+
+  .luxol-scroll {
+    right: 17px;
+    bottom: 22px;
+    font-size: 0.55rem;
+  }
+
+  .luxol-subtitulo {
+    margin-bottom: 19px;
+    font-size: 0.65rem;
+    letter-spacing: 1.3px;
+  }
+
+  .luxol-concepto-texto p,
+  .luxol-catalogo-contenido > p {
+    font-size: 0.9rem;
+  }
+
+  .luxol-valores {
+    gap: 8px;
+  }
+
+  .luxol-valores > div {
+    font-size: 0.73rem;
+  }
+
+  .luxol-funciones-grid {
+    grid-template-columns: 1fr;
+    gap: 13px;
+  }
+
+  .luxol-funcion-card {
+    min-height: 225px;
+    padding: 24px;
+  }
+
+  .luxol-funcion-arriba {
+    margin-bottom: 22px;
+  }
+
+  .luxol-categorias {
+    gap: 13px 10px;
+  }
+
+  .luxol-categorias span {
+    font-size: 0.78rem;
+  }
+
+  .luxol-catalogo-panel {
+    padding: 21px;
+  }
+
+  .luxol-panel-cabecera h3 {
+    font-size: 1.2rem;
+  }
+
+  .luxol-coleccion {
+    grid-template-columns: 28px 1fr 18px;
+    gap: 10px;
+  }
+
+  .luxol-coleccion strong {
+    font-size: 0.9rem;
+  }
+
+  .luxol-coleccion > div span {
+    font-size: 0.72rem;
+  }
+
+  .luxol-panel-pie {
+    font-size: 0.57rem;
+    letter-spacing: 0.8px;
+  }
+
+  .luxol-pasos {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .luxol-paso {
+    max-width: 320px;
+    margin-inline: auto;
+  }
+
+  .luxol-paso-numero {
+    margin-bottom: 13px;
+  }
+
+  .luxol-paso-icono {
+    width: 55px;
+    height: 55px;
+    margin-bottom: 14px;
+  }
+
+  .luxol-paso p {
+    font-size: 0.84rem;
+  }
+
+  .luxol-tecnologia {
+    grid-template-columns: 32px 1fr 22px;
+    gap: 12px;
+  }
+
+  .luxol-alcance-card {
+    padding: 25px 21px;
+  }
+
+  .luxol-alcance-contenido p {
+    font-size: 0.85rem;
+  }
+
+  .luxol-contacto {
+    padding-top: 20px;
+  }
+
+  .luxol-contacto-card {
+    padding: 34px 22px;
+  }
+
+  .luxol-contacto-contenido h2 {
+    font-size: 2.15rem;
+  }
+
+  .luxol-contacto-contenido > p {
+    font-size: 0.88rem;
+  }
+
+  .luxol-contacto-acciones {
+    flex-direction: column;
+  }
+
+  .luxol-contacto-decoracion {
+    top: 20px;
+    right: -55px;
+    transform: rotate(-12deg);
+  }
+
+  .luxol-volver-final {
+    font-size: 0.76rem;
+  }
+}
+
+/* =========================================
+   PANTALLAS MUY PEQUEÑAS
+========================================= */
+
+@media (max-width: 360px) {
+  .luxol-contenedor {
+    width: calc(100% - 26px);
+  }
+
+  .luxol-hero h1 {
+    font-size: 4.2rem;
+  }
+
+  .luxol-hero-datos {
+    grid-template-columns: 1fr;
+  }
+
+  .luxol-categorias {
+    grid-template-columns: 1fr;
+  }
+
+  .luxol-contacto-card {
+    padding: 29px 17px;
+  }
+
+  .luxol-contacto-contenido h2 {
+    font-size: 1.9rem;
+  }
+}
