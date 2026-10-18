@@ -44,11 +44,11 @@ function Portada() {
           {/* FOTO Y NOMBRE */}
           <div className="portada-identidad">
             <div className="portada-foto">
-              <img
-                src="/public/images/perfil.jpg"
-                alt="Fotografía de Harold Quiroz"
-              />
-            </div>
+            <img
+              src="/images/perfil.jpg"
+              alt="Fotografía de Harold Quiroz"
+            />
+          </div>
 
             <div className="portada-nombre">
               <p className="portada-saludo">
