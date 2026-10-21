@@ -45,7 +45,7 @@ const contactos = [
     nombre: "LinkedIn",
     descripcion: "Conectemos profesionalmente y exploremos oportunidades.",
     detalle: "Red profesional",
-    enlace: "https://www.linkedin.com/in/TU_PERFIL/",
+    enlace: "https://www.linkedin.com/in/harold-quiroz-carrillo-57479b445/",
     icono: BriefcaseBusiness,
     clase: "contacto-linkedin",
     textoBoton: "Ver LinkedIn",

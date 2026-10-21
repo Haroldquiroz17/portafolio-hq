@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from "react";
 import {
   BrowserRouter,
@@ -25,6 +24,10 @@ import Supermercado from "./pages/Supermercado";
 import Montalban from "./pages/Montalban";
 import SanLuisGonzaga from "./pages/SanLuisGonzaga";
 import ZooMundo from "./pages/ZooMundo";
+
+// Nuevos videojuegos
+import RapiaAventuras from "./pages/RapiaAventuras";
+import RelojDeSombras from "./pages/RelojDeSombras";
 
 import "./App.css";
 
@@ -81,6 +84,17 @@ function ContenidoRutas() {
         <Route
           path="/proyectos/zoomundo"
           element={<ZooMundo />}
+        />
+
+        {/* Nuevas rutas de videojuegos */}
+        <Route
+          path="/proyectos/rapia-aventuras"
+          element={<RapiaAventuras />}
+        />
+
+        <Route
+          path="/proyectos/reloj-de-sombras"
+          element={<RelojDeSombras />}
         />
 
         <Route path="/sobre-mi" element={<SobreMi />} />

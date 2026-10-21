@@ -1565,3 +1565,29 @@
     transition-duration: 0.01ms !important;
   }
 }
+
+/* ==========================================
+   VIDEOJUEGOS
+========================================== */
+
+.proyecto-card-catalogo:has(
+  .proyecto-categoria-imagen
+) .proyecto-imagen {
+  object-position: center;
+}
+
+/* Portadas de videojuegos */
+.proyecto-card-catalogo img[src*="rapia-aventuras"],
+.proyecto-card-catalogo img[src*="reloj-de-sombras"] {
+  object-fit: contain;
+  padding: 8px;
+  background: #101a2c;
+}
+
+/* Adaptación para móviles */
+@media (max-width: 600px) {
+  .proyecto-card-catalogo img[src*="rapia-aventuras"],
+  .proyecto-card-catalogo img[src*="reloj-de-sombras"] {
+    padding: 5px;
+  }
+}

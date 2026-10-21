@@ -1,5 +1,4 @@
-﻿
-import { useMemo, useState } from "react";
+﻿import { useMemo, useState } from "react";
 import {
   ArrowDown,
   ArrowDownRight,
@@ -8,6 +7,7 @@ import {
   CheckCircle2,
   Code2,
   ExternalLink,
+  Gamepad2,
   Layers3,
   Monitor,
   Palette,
@@ -26,7 +26,8 @@ type Categoria =
   | "E-commerce"
   | "Sistemas de gestión"
   | "Diseño UI/UX"
-  | "Aplicaciones móviles";
+  | "Aplicaciones móviles"
+  | "Videojuegos";
 
 interface Proyecto {
   id: string;
@@ -37,7 +38,7 @@ interface Proyecto {
   imagen: string;
   tecnologias: string[];
   destacado?: boolean;
-  tipo: "Principal" | "Sistema" | "Diseño" | "Aplicación";
+  tipo: "Principal" | "Sistema" | "Diseño" | "Aplicación" | "Videojuego";
   detalle: string;
 }
 
@@ -125,7 +126,7 @@ const proyectos: Proyecto[] = [
       "Aplicación móvil planteada para una institución educativa, con una propuesta centrada en facilitar el acceso a información y servicios escolares.",
     categoria: "Aplicaciones móviles",
     imagen: "/images/proyectos/san-luis-gonzaga.png",
-    tecnologias: ["Expo","TypeScript", "Bootstrap"],
+    tecnologias: ["Expo", "TypeScript", "Bootstrap"],
     tipo: "Aplicación",
     detalle: "Detalle de San Luis Gonzaga",
   },
@@ -136,10 +137,34 @@ const proyectos: Proyecto[] = [
     descripcion:
       "Proyecto móvil con una propuesta propia de funcionalidades e interfaz. Su página de detalle presentará el funcionamiento y los aspectos técnicos que se puedan mostrar.",
     categoria: "Aplicaciones móviles",
-    imagen: "/images/proyectos/zoomundo.jpg",
+    imagen: "/images/proyectos/zoomundo.png",
     tecnologias: ["Expo", "React Native"],
     tipo: "Aplicación",
     detalle: "Detalle de ZooMundo",
+  },
+  {
+    id: "rapia-aventuras",
+    nombre: "Rapia Aventuras",
+    subtitulo: "Aventura de entregas en 2D",
+    descripcion:
+      "Videojuego web protagonizado por Ernesto, un repartidor que debe entregar pedidos, superar obstáculos y avanzar por distintos niveles. Durante la aventura puede recoger monedas, conservar sus vidas y conseguir mejoras para continuar su recorrido.",
+    categoria: "Videojuegos",
+    imagen: "/images/proyectos/rapia-aventuras.png",
+    tecnologias: ["TypeScript", "Vite", "JavaScript"],
+    tipo: "Videojuego",
+    detalle: "Detalle de Rapia Aventuras",
+  },
+  {
+    id: "reloj-de-sombras",
+    nombre: "Reloj de Sombras",
+    subtitulo: "Modo aventura corto para móviles",
+    descripcion:
+      "Videojuego de aventura diseñado para dispositivos móviles Android. Presenta una experiencia corta para explorar y jugar desde el teléfono, distribuida como APK para instalarse en dispositivos compatibles.",
+    categoria: "Videojuegos",
+    imagen: "/images/proyectos/reloj-de-sombras.png",
+    tecnologias: ["Expo", "React Native", "TypeScript", "Android APK"],
+    tipo: "Videojuego",
+    detalle: "Detalle de Reloj de Sombras",
   },
 ];
 
@@ -149,6 +174,7 @@ const categorias = [
   "Sistemas de gestión",
   "Diseño UI/UX",
   "Aplicaciones móviles",
+  "Videojuegos",
 ] as const;
 
 type FiltroCategoria = (typeof categorias)[number];
@@ -158,6 +184,7 @@ const iconosCategoria = {
   "Sistemas de gestión": Layers3,
   "Diseño UI/UX": Palette,
   "Aplicaciones móviles": Smartphone,
+  Videojuegos: Gamepad2,
 };
 
 export default function Proyectos() {
@@ -195,9 +222,7 @@ export default function Proyectos() {
 
   return (
     <main className="proyectos">
-      {/* =====================================
-          PRESENTACIÓN PRINCIPAL
-      ====================================== */}
+      {/* PRESENTACIÓN PRINCIPAL */}
 
       <section className="proyectos-hero">
         <div className="proyectos-hero-luz proyectos-hero-luz-uno" />
@@ -212,18 +237,21 @@ export default function Proyectos() {
           <h1>
             Ideas que toman forma
             <br />
-            a través de la <span>tecnología.</span>
+            a través de <span>la tecnología.</span>
           </h1>
 
           <p className="proyectos-hero-descripcion">
             Explora proyectos de desarrollo web, sistemas de gestión,
-            aplicaciones móviles y diseño de interfaces. Cada uno representa
-            una oportunidad para aprender, experimentar y construir soluciones
-            digitales.
+            aplicaciones móviles, videojuegos y diseño de interfaces. Cada uno
+            representa una oportunidad para aprender, experimentar y construir
+            soluciones digitales.
           </p>
 
           <div className="proyectos-hero-acciones">
-            <a href="#proyectos-destacados" className="proyectos-boton-principal">
+            <a
+              href="#proyectos-destacados"
+              className="proyectos-boton-principal"
+            >
               Explorar proyectos
               <ArrowRight size={18} />
             </a>
@@ -250,9 +278,7 @@ export default function Proyectos() {
               <span className="proyectos-estadistica-numero">
                 {String(cantidadCategorias).padStart(2, "0")}
               </span>
-              <span className="proyectos-estadistica-texto">
-                Categorías
-              </span>
+              <span className="proyectos-estadistica-texto">Categorías</span>
             </div>
 
             <div className="proyectos-estadistica-separador" />
@@ -278,9 +304,7 @@ export default function Proyectos() {
         </a>
       </section>
 
-      {/* =====================================
-          PROYECTOS DESTACADOS
-      ====================================== */}
+      {/* PROYECTOS DESTACADOS */}
 
       <section
         className="proyectos-seccion proyectos-destacados"
@@ -378,9 +402,7 @@ export default function Proyectos() {
         </div>
       </section>
 
-      {/* =====================================
-          CATÁLOGO GENERAL
-      ====================================== */}
+      {/* CATÁLOGO GENERAL */}
 
       <section className="proyectos-seccion proyectos-catalogo" id="catalogo">
         <div className="proyectos-contenedor">
@@ -401,8 +423,6 @@ export default function Proyectos() {
               te interese.
             </p>
           </div>
-
-          {/* Filtros por categoría */}
 
           <div className="proyectos-controles">
             <div
@@ -469,13 +489,10 @@ export default function Proyectos() {
             </span>
           </div>
 
-          {/* Tarjetas de proyectos */}
-
           {proyectosFiltrados.length > 0 ? (
             <div className="proyectos-galeria">
               {proyectosFiltrados.map((proyecto, indice) => {
-                const IconoCategoria =
-                  iconosCategoria[proyecto.categoria];
+                const IconoCategoria = iconosCategoria[proyecto.categoria];
 
                 return (
                   <article
@@ -580,9 +597,7 @@ export default function Proyectos() {
         </div>
       </section>
 
-      {/* =====================================
-          ENFOQUE DE DESARROLLO
-      ====================================== */}
+      {/* ENFOQUE DE DESARROLLO */}
 
       <section className="proyectos-seccion proyectos-enfoque">
         <div className="proyectos-contenedor">
@@ -654,9 +669,7 @@ export default function Proyectos() {
         </div>
       </section>
 
-      {/* =====================================
-          TRANSPARENCIA Y CRÉDITOS
-      ====================================== */}
+      {/* TRANSPARENCIA Y CRÉDITOS */}
 
       <section className="proyectos-seccion proyectos-transparencia">
         <div className="proyectos-contenedor">
@@ -699,9 +712,7 @@ export default function Proyectos() {
         </div>
       </section>
 
-      {/* =====================================
-          INVITACIÓN A COLABORAR
-      ====================================== */}
+      {/* INVITACIÓN A COLABORAR */}
 
       <section className="proyectos-seccion proyectos-contacto">
         <div className="proyectos-contenedor">
@@ -766,9 +777,7 @@ export default function Proyectos() {
         </div>
       </section>
 
-      {/* =====================================
-          CIERRE
-      ====================================== */}
+      {/* CIERRE */}
 
       <footer className="proyectos-cierre">
         <div className="proyectos-contenedor proyectos-cierre-contenido">
@@ -782,10 +791,13 @@ export default function Proyectos() {
             digitales.
           </p>
 
-          <a href="#top" onClick={(evento) => {
-            evento.preventDefault();
-            window.scrollTo({ top: 0, behavior: "smooth" });
-          }}>
+          <a
+            href="#top"
+            onClick={(evento) => {
+              evento.preventDefault();
+              window.scrollTo({ top: 0, behavior: "smooth" });
+            }}
+          >
             Volver arriba
             <ArrowDownRight size={16} />
           </a>
