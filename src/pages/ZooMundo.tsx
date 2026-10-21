@@ -223,7 +223,7 @@ function ZooMundo() {
           <div className="zoomundo-hero-visual">
             <div className="zoomundo-image-frame">
               <img
-                src="/public/images/proyectos/zoomundo.png"
+              src="/images/proyectos/zoomundo.png"
                 alt="Portada del proyecto ZooMundo"
                 className="zoomundo-cover-image"
               />
