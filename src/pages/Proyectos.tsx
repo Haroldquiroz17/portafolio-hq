@@ -1,4 +1,5 @@
-﻿import { useMemo, useState } from "react";
+﻿
+import { useMemo, useState } from "react";
 import {
   ArrowDown,
   ArrowDownRight,
@@ -27,7 +28,8 @@ type Categoria =
   | "Sistemas de gestión"
   | "Diseño UI/UX"
   | "Aplicaciones móviles"
-  | "Videojuegos";
+  | "Videojuegos"
+  | "Desarrollo web";
 
 interface Proyecto {
   id: string;
@@ -166,6 +168,24 @@ const proyectos: Proyecto[] = [
     tipo: "Videojuego",
     detalle: "Detalle de Reloj de Sombras",
   },
+  {
+    id: "wts",
+    nombre: "World Technology System",
+    subtitulo: "Soluciones tecnológicas digitales",
+    descripcion:
+      "Emprendimiento tecnológico desarrollado junto a Ronnie Catunta, enfocado en desarrollo web, backend, aplicaciones móviles y análisis de datos.",
+    categoria: "Desarrollo web",
+    imagen: "/images/proyectos/wsp.png",
+    tecnologias: [
+      "Desarrollo web",
+      "Backend",
+      "Aplicaciones móviles",
+      "Análisis de datos",
+    ],
+    destacado: false,
+    tipo: "Sistema",
+    detalle: "Detalle de World Technology System",
+  },
 ];
 
 const categorias = [
@@ -175,16 +195,18 @@ const categorias = [
   "Diseño UI/UX",
   "Aplicaciones móviles",
   "Videojuegos",
+  "Desarrollo web",
 ] as const;
 
 type FiltroCategoria = (typeof categorias)[number];
 
-const iconosCategoria = {
+const iconosCategoria: Record<Categoria, typeof Monitor> = {
   "E-commerce": Monitor,
   "Sistemas de gestión": Layers3,
   "Diseño UI/UX": Palette,
   "Aplicaciones móviles": Smartphone,
   Videojuegos: Gamepad2,
+  "Desarrollo web": Code2,
 };
 
 export default function Proyectos() {

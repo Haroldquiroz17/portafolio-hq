@@ -1,3 +1,4 @@
+
 import { useEffect, useState } from "react";
 import {
   BrowserRouter,
@@ -25,9 +26,12 @@ import Montalban from "./pages/Montalban";
 import SanLuisGonzaga from "./pages/SanLuisGonzaga";
 import ZooMundo from "./pages/ZooMundo";
 
-// Nuevos videojuegos
+// Videojuegos
 import RapiaAventuras from "./pages/RapiaAventuras";
 import RelojDeSombras from "./pages/RelojDeSombras";
+
+// World Technology System
+import WTS from "./pages/WTS";
 
 import "./App.css";
 
@@ -86,7 +90,7 @@ function ContenidoRutas() {
           element={<ZooMundo />}
         />
 
-        {/* Nuevas rutas de videojuegos */}
+        {/* Videojuegos */}
         <Route
           path="/proyectos/rapia-aventuras"
           element={<RapiaAventuras />}
@@ -95,6 +99,12 @@ function ContenidoRutas() {
         <Route
           path="/proyectos/reloj-de-sombras"
           element={<RelojDeSombras />}
+        />
+
+        {/* World Technology System */}
+        <Route
+          path="/proyectos/wts"
+          element={<WTS />}
         />
 
         <Route path="/sobre-mi" element={<SobreMi />} />
